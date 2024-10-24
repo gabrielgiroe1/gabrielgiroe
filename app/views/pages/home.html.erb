@@ -1,6 +1,30 @@
 <div class="container text-center">
   <%= image_tag("gabriel-profile-image.jpg", :class => "rounded-circle", :alt => "Profile Picture")%>
   <h1>Gabriel Giroe</h1>
-  <p>Software developer, using Ruby on Rails to bring joy. Let's chat!</p>
-  <div> Projects</div>
+  <p>Software developer, using Ruby on Rails to bring joy. 
+  <%= link_to "https://www.instagram.com/gabriel.giroe/", target: "_blank" do%>
+  <u style="color: yellow"> Let's chat! </u>
+  <% end %>
+  </p>
+  <%# <div> Projects</div> %>
+  <div class="mt-4">
+    <%= link_to "https://www.instagram.com/gabriel.giroe/", target: "_blank" do %>
+      <i class="fa-brands fa-instagram"></i>
+    <% end %>
+    <%= link_to "https://x.com/gabrielgiroe", target: "_blank" do %>
+      <i class="fa-brands fa-x-twitter"></i>
+    <% end %>
+    <%= link_to "https://www.linkedin.com/in/georgel-gabriel-giroe-26379520a/", target: "_blank" do %>
+      <i class="fa-brands fa-linkedin-in"></i>
+    <% end %>
+    <%= link_to "https://github.com/gabrielgiroe1", target: "_blank" do %>
+      <i class="fa-brands fa-github"></i>
+    <% end %>
+    <%= link_to "Gabriel_Giroe_CV_2024_-_Software_Engineer.pdf", target: "_blank" do %>
+      <i class="fa-regular fa-file"></i> <%#aici trebuie sa pun cv ul%>
+    <% end %>
+    <%= link_to "mailto:gabriel.giroe@gmail.com", target: "_blank" do %>
+      <i class="fa-regular fa-envelope"></i>
+    <% end %>
+  </div>
 </div>
