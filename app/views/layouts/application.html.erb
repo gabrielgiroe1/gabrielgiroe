@@ -1,15 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Gabrielgiroe</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!-- Basic Page Needs -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Gabriel Giroe - Software Developer</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Gabriel Giroe's personal website. I am a software developer specializing in Ruby on Rails. Check out my work and let's connect!">
+    <meta name="keywords" content="Gabriel Giroe, Software Developer, Ruby on Rails, Web Developer, Portfolio, Programming, Web Development">
+    <meta name="author" content="Gabriel Giroe">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Open Graph Meta Tags for Social Sharing -->
+    <meta property="og:title" content="Gabriel Giroe - Software Developer">
+    <meta property="og:description" content="Explore the portfolio of Gabriel Giroe, a Ruby on Rails software developer. Let's connect!">
+    <meta property="og:image" content="<%= asset_path('gabriel-profile-image.jpg') %>">
+    <meta property="og:url" content="https://gabrielgiroe.onrender.com">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Gabriel Giroe - Software Developer">
+    <meta name="twitter:description" content="Explore Gabriel Giroe's work and connect with me. Specializing in Ruby on Rails.">
+    <meta name="twitter:image" content="<%= asset_path('gabriel-profile-image.jpg') %>">
+
+    <!-- CSRF Meta Tags -->
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+
+    <!-- Tailwind CSS (Ensure Proper TailwindCSS Integration) -->
+    <%= stylesheet_link_tag "tailwind", "data-turbo-track": "reload" %>
+
+    <!-- Optional: Additional CSS (If You Have Other Styles) -->
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+
+    <!-- Import JavaScript (via Importmap or Webpacker) -->
     <%= javascript_importmap_tags %>
+
+    <!-- Google Analytics (Replace 'YOUR-GA-ID' with your actual Google Analytics ID) -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR-GA-ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'YOUR-GA-ID');
+    </script> -->
+
+    <!-- Structured Data for SEO (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Gabriel Giroe",
+      "jobTitle": "Software Developer",
+      "url": "https://gabrielgiroe.onrender.com",
+      "sameAs": [
+        "https://www.linkedin.com/in/georgel-gabriel-giroe-26379520a/",
+        "https://github.com/gabrielgiroe1",
+        "https://www.instagram.com/gabriel.giroe/"
+      ],
+      "description": "I am a software developer specializing in Ruby on Rails. Visit my portfolio to learn more about my projects and skills."
+    }
+    </script>
   </head>
+
   <body>
+    <!-- Main Content -->
     <%= yield %>
   </body>
 </html>
