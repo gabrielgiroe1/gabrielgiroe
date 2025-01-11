@@ -1,13 +1,42 @@
-<div class="row">
-  <div class="col-md-4">
-    <div class="card">
-      <img src="path-to-image.jpg" class="card-img-top" alt="Project Image">
-      <div class="card-body">
-        <h5 class="card-title">Project 1</h5>
-        <p class="card-text">Description of Project 1</p>
-        <a href="https://github.com/yourproject1" class="btn btn-primary">View Project</a>
+<div class="min-h-screen bg-gray-900 text-white flex items-center justify-center">
+  <div class="container mx-auto max-w-6xl px-4">
+    <div class="flex flex-col md:flex-row items-start md:space-x-8">
+      
+      <!-- Video Section -->
+      <div class="w-full md:w-1/2">
+        <div class="relative overflow-hidden rounded-lg shadow-lg">
+          <video autoplay loop muted playsinline class="w-full rounded-lg">
+            <source src="<%= asset_path('projects-hero-video.mp4') %>" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
       </div>
+
+      <!-- Text Section -->
+      <div class="w-full md:w-1/2">
+        <div class="space-y-4">
+          <h1 class="text-4xl font-bold">Near_You</h1>
+          <p class="text-lg">
+            A web app connecting users with local service providers. It simplifies service discovery and booking through a user-friendly interface and robust backend features.
+          </p>
+          <h3 class="text-2xl font-semibold">Key Features:</h3>
+          <ul class="list-disc pl-6">
+            <li>Service category selection and location-based search.</li>
+            <li>Stripe payment integration for secure transactions.</li>
+            <li>Google Maps integration for easy navigation.</li>
+            <li>Profile management for providers and users.</li>
+            <li>In-app and email notifications powered by `noticed` gem.</li>
+          </ul>
+          <h3 class="text-2xl font-semibold">Tech Stack:</h3>
+          <p>Ruby on Rails, Tailwind CSS, PostgreSQL, Hotwire, AWS S3, Stripe API.</p>
+          <!-- Links -->
+          <div class="flex flex-wrap space-x-4">
+            <%= link_to "View Live App", "https://near-you-nf5o.onrender.com", target: "_blank", class: "bg-yellow-500 text-black px-4 py-2 rounded-lg font-semibold hover:bg-yellow-600" %>
+            <%= link_to "GitHub Repository", "https://github.com/gabrielgiroe1/near_you", target: "_blank", class: "bg-gray-700 px-4 py-2 rounded-lg font-semibold hover:bg-gray-600" %>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
-  <!-- Repeat for more projects -->
 </div>
