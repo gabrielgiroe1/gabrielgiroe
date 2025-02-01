@@ -115,6 +115,9 @@ GEM
       sassc (~> 2.0)
     globalid (1.2.1)
       activesupport (>= 6.1)
+    heroicons-rails (1.2.0)
+      actionpack (>= 6.0.0)
+      railties (>= 6.0.0)
     i18n (1.14.6)
       concurrent-ruby (~> 1.0)
     importmap-rails (2.0.3)
@@ -295,6 +298,7 @@ DEPENDENCIES
   capybara
   debug
   font-awesome-sass (~> 6.5, >= 6.5.2)
+  heroicons-rails (~> 1.2)
   importmap-rails
   jbuilder
   puma (>= 5.0)

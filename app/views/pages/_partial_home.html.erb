@@ -22,15 +22,15 @@
         <%= link_to "https://github.com/gabriel.giroe1", target: "_blank", class: "mb-2" do %>
           <i class="fa-brands fa-github text-white text-3xl sm:text-4xl"></i>
         <% end %>
-        <%= link_to "/Gabriel_Giroe_CV_2024_-_Software_Engineer.pdf", target: "_blank", class: "mb-2" do %>
-          <i class="fa-regular fa-file text-white text-3xl sm:text-4xl"></i>
+        <%= link_to "/Gabriel_Giroe_CV_2024_-_Software_Engineer.pdf", target: "_blank", class: "mb-2 relative inline-block" do %>
+          <i class="fa-regular fa-file text-white text-3xl sm:text-4xl relative"></i>
+          <span class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-xs sm:text-sm pointer-events-none">CV</span>
         <% end %>
         <%= link_to "mailto:gabriel.giroe@gmail.com", target: "_blank", class: "mb-2" do %>
           <i class="fa-regular fa-envelope text-white text-3xl sm:text-4xl"></i>
         <% end %>
       </div>
     </div>
-
     <!-- Right Section: Personal Projects Button -->
     <div class="sm:ml-auto mt-4 sm:mt-0">
       <%= link_to "Personal Projects", "pages/projects", data: { turbo: false }, class: "bg-yellow-500 text-black px-4 py-2 rounded-lg font-semibold shadow-lg hover:bg-yellow-600" %>

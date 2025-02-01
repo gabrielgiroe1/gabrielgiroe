@@ -68,3 +68,4 @@ end
 
 gem "tailwindcss-rails", "~> 3.0"
 gem 'font-awesome-sass', '~> 6.5', '>= 6.5.2'
+gem 'heroicons-rails', '~> 1.2'
