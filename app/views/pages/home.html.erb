@@ -1,3 +1,17 @@
-<div class="h-screen w-full bg-cover bg-center bg-no-repeat bg-fixed flex flex-col justify-end" style="background-image: url('<%= asset_path("gabriel-profile-image.jpg") %>');">
-  <%= render "partial_home"%>
+<!-- Mobile: Full background image with content overlay -->
+<div class="lg:hidden h-screen w-full bg-no-repeat bg-fixed flex flex-col justify-end bg-cover bg-center"
+     style="background-image: url('<%= asset_path("gabriel-profile-image.jpg") %>');">
+  <%= render "partial_home", desktop: false %>
+</div>
+
+<!-- Desktop: Split layout - image left, content right -->
+<div class="hidden lg:flex h-screen w-full bg-black">
+  <!-- Left: Image -->
+  <div class="w-1/2 h-full bg-no-repeat bg-cover bg-top"
+       style="background-image: url('<%= asset_path("gabriel-profile-image.jpg") %>');">
+  </div>
+  <!-- Right: Content -->
+  <div class="w-1/2 h-full flex items-center justify-center bg-gradient-to-br from-slate-800 via-slate-900 to-zinc-900">
+    <%= render "partial_home", desktop: true %>
+  </div>
 </div>
