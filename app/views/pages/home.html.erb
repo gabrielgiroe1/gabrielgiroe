@@ -1,17 +1,65 @@
+<style>
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 1.2s ease-out forwards;
+  }
+
+  .animation-delay-200 { animation-delay: 0.2s; opacity: 0; }
+  .animation-delay-400 { animation-delay: 0.4s; opacity: 0; }
+  .animation-delay-600 { animation-delay: 0.6s; opacity: 0; }
+
+  .hero-image {
+    background-image: url('<%= asset_path("gabriel-profile-image.jpg") %>');
+  }
+
+  /* Subtle accent line connecting both sides */
+  .accent-line::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #eab308, transparent);
+    transform: translateX(-30px);
+  }
+</style>
+
 <!-- Mobile: Full background image with content overlay -->
-<div class="lg:hidden h-screen w-full bg-no-repeat bg-fixed flex flex-col justify-end bg-cover bg-center"
-     style="background-image: url('<%= asset_path("gabriel-profile-image.jpg") %>');">
+<div class="lg:hidden h-screen w-full bg-no-repeat bg-fixed flex flex-col justify-end bg-cover bg-center hero-image">
   <%= render "partial_home", desktop: false %>
 </div>
 
 <!-- Desktop: Split layout - image left, content right -->
-<div class="hidden lg:flex h-screen w-full bg-black">
-  <!-- Left: Image -->
-  <div class="w-1/2 h-full bg-no-repeat bg-cover bg-top"
-       style="background-image: url('<%= asset_path("gabriel-profile-image.jpg") %>');">
+<div class="hidden lg:flex h-screen w-full">
+  <!-- Left: Image with subtle overlay gradient for connection -->
+  <div class="w-1/2 h-full bg-no-repeat bg-cover bg-top hero-image relative">
+    <div class="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-slate-900/30"></div>
   </div>
   <!-- Right: Content -->
-  <div class="w-1/2 h-full flex items-center justify-center bg-gradient-to-br from-slate-800 via-slate-900 to-zinc-900">
+  <div class="w-1/2 h-full flex items-center bg-gradient-to-br from-slate-800 via-slate-900 to-slate-950 relative overflow-hidden">
+    <!-- Decorative background element -->
+    <div class="absolute top-0 right-0 w-96 h-96 bg-yellow-500/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+    <div class="absolute bottom-0 left-0 w-64 h-64 bg-slate-700/20 rounded-full blur-2xl translate-y-1/2 -translate-x-1/2"></div>
     <%= render "partial_home", desktop: true %>
   </div>
 </div>
